@@ -27,7 +27,8 @@ export default Splash;
 const styles = StyleSheet.create({
   page: {
     flex: 1,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    backgroundColor: colors.white
   },
   header: {
     paddingVertical: 20,
