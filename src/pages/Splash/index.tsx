@@ -3,6 +3,7 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 import { House, Logo } from '@assets';
 import { colors, fonts } from '@utils';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Button } from '@components';
 
 const Splash = () => {
   return (
@@ -11,6 +12,7 @@ const Splash = () => {
         <Logo />
         <Text style={styles.title}>Find Cozy House to Stay and Happy</Text>
         <Text style={styles.desc}>Stop membuang banyak waktu pada tempat yang tidak habitable</Text>
+        <Button title="Explore Now" />
       </View>
       <View style={styles.bottom}>
         <Image source={House} style={styles.bottomImg} />
