@@ -1,2 +1,19 @@
-import { Splash } from './pages';
-export default Splash;
+import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+import Router from './router';
+
+const MainApp = () => {
+  return (
+    <>
+      <NavigationContainer>
+        <Router />
+      </NavigationContainer>
+    </>
+  );
+};
+
+const App = () => {
+  return <MainApp />;
+};
+
+export default App;
