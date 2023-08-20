@@ -18,4 +18,4 @@ yarn ios
 
 | Splash Screen                                                                                                                | Not Found                                                                                                               | 
 | ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | 
-| <img src="https://raw.githubusercontent.com/ryanadhitama/cozy-property/master/screenshot/01.splash-screen.png" alt="drawing" /> | <img src="https://raw.githubusercontent.com/ryanadhitama/cozy-property/master/screenshot/02.not-found.png" alt="drawing" /> | 
+| <img src="https://raw.githubusercontent.com/ryanadhitama/cozy-property/master/screenshot/01.splash-screen.png?ver=1" alt="drawing" /> | <img src="https://raw.githubusercontent.com/ryanadhitama/cozy-property/master/screenshot/02.not-found.png?ver=1" alt="drawing" /> | 
