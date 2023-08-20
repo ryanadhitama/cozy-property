@@ -1,16 +1,17 @@
 import { colors, fonts } from '@utils';
 import React from 'react';
-import { Text, TextStyle, TouchableOpacity, ViewStyle } from 'react-native';
+import { StyleProp, Text, TextStyle, TouchableOpacity, ViewStyle } from 'react-native';
 
 type ButtonProps = {
   title?: string;
   type?: string;
   onPress?: () => void;
+  style?: StyleProp<ViewStyle>;
 };
 
-const Button = ({ type, title, onPress }: ButtonProps) => {
+const Button = ({ type, title, onPress, style }: ButtonProps) => {
   return (
-    <TouchableOpacity style={ContainerStyles(type as string)} onPress={onPress}>
+    <TouchableOpacity style={[ContainerStyles(type as string), style]} onPress={onPress}>
       <Text style={TextStyles()}>{title}</Text>
     </TouchableOpacity>
   );
