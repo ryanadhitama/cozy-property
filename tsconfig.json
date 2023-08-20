@@ -5,6 +5,7 @@
     "baseUrl": "./src/",
     "paths": {
       "@assets": ["assets"],
+      "@utils": ["utils"],
     }
   },
 }

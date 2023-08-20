@@ -1,12 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Logo } from '@assets';
+import { fonts } from '@utils';
 
 const Splash = () => {
   return (
     <View style={styles.page}>
       <Logo />
-      <Text style={styles.title}>Splash</Text>
+      <Text style={styles.title}>Splash Screen</Text>
     </View>
   );
 };
@@ -21,6 +22,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    marginTop: 20
+    marginTop: 20,
+    fontFamily: fonts.primary.normal
   }
 });
