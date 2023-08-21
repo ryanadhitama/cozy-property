@@ -5,14 +5,14 @@ import { colors, fonts } from '@utils';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button } from '@components';
 
-const Splash = () => {
+const Splash = ({ navigation }: any) => {
   return (
     <SafeAreaView edges={['top', 'left', 'right']} style={styles.page}>
       <View style={styles.header}>
         <Logo />
         <Text style={styles.title}>Find Cozy House to Stay and Happy</Text>
         <Text style={styles.desc}>Stop membuang banyak waktu pada tempat yang tidak habitable</Text>
-        <Button title="Explore Now" />
+        <Button title="Explore Now" onPress={() => navigation.navigate('MainApp')} />
       </View>
       <View style={styles.bottom}>
         <Image source={House} style={styles.bottomImg} />
