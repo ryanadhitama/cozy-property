@@ -1,5 +1,13 @@
-import { DummyCity1, DummyCity2, DummyCity3, DummyCity4 } from '@assets';
-import { CityCard, Gap, Header } from '@components';
+import {
+  DummyCity1,
+  DummyCity2,
+  DummyCity3,
+  DummyCity4,
+  DummySpace1,
+  DummySpace2,
+  DummySpace3
+} from '@assets';
+import { CityCard, Gap, Header, SpaceCard } from '@components';
 import { colors, fonts } from '@utils';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
@@ -25,6 +33,30 @@ const Home = () => {
       image: DummyCity4
     }
   ];
+
+  const spaces = [
+    {
+      name: 'Kuretakeso Hott',
+      rating: 5,
+      image: DummySpace1,
+      price: 52,
+      location: 'Bandung, Germany'
+    },
+    {
+      name: 'Roemah Nenek',
+      rating: 4,
+      image: DummySpace2,
+      price: 22,
+      location: 'Seattle, Bogor'
+    },
+    {
+      name: 'Darrling How',
+      rating: 4,
+      image: DummySpace3,
+      price: 32,
+      location: 'Jakarta, Indonesia'
+    }
+  ];
   return (
     <SafeAreaView style={styles.page}>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -48,7 +80,19 @@ const Home = () => {
           <Gap height={30} />
           <Text style={styles.title}>Recommended Space</Text>
           <Gap height={16} />
-          <Gap height={12} />
+          <View style={styles.spaces}>
+            {spaces?.map((space: any) => (
+              <SpaceCard
+                name={space?.name}
+                image={space?.image}
+                rating={space?.rating}
+                price={space?.price}
+                location={space?.location}
+                key={`space-${space?.name}`}
+              />
+            ))}
+          </View>
+          <Gap height={30} />
           <Text style={styles.title}>Tips & Guidance</Text>
           <Gap height={16} />
         </View>
@@ -71,5 +115,9 @@ const styles = StyleSheet.create({
   },
   cities: {
     paddingLeft: 24
+  },
+  spaces: {
+    paddingHorizontal: 24,
+    gap: 20
   }
 });

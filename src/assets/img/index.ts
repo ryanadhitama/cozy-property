@@ -5,3 +5,6 @@ export { default as DummyCity4 } from './city4.png';
 export { default as DummyCity5 } from './city5.png';
 export { default as DummyCity6 } from './city6.png';
 export { default as House } from './house.png';
+export { default as DummySpace1 } from './space1.png';
+export { default as DummySpace2 } from './space2.png';
+export { default as DummySpace3 } from './space3.png';

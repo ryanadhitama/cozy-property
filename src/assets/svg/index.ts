@@ -8,6 +8,7 @@ import News from './news.svg';
 import NewsActive from './news-active.svg';
 import Wishlist from './wishlist.svg';
 import WishlistActive from './wishlist-active.svg';
+import Star from './star.svg';
 
 export {
   Logo,
@@ -19,5 +20,6 @@ export {
   News,
   NewsActive,
   Wishlist,
-  WishlistActive
+  WishlistActive,
+  Star
 };

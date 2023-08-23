@@ -30,10 +30,5 @@ const styles = StyleSheet.create({
     color: colors.text.primary,
     fontFamily: fonts.primary[500],
     textAlign: 'center'
-  },
-  desc: {
-    fontSize: 16,
-    color: colors.text.secondary,
-    fontFamily: fonts.primary[300]
   }
 });
