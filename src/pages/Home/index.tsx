@@ -92,9 +92,7 @@ const Home = () => {
               />
             ))}
           </View>
-          <Gap height={30} />
-          <Text style={styles.title}>Tips & Guidance</Text>
-          <Gap height={16} />
+          <Gap height={100} />
         </View>
       </ScrollView>
     </SafeAreaView>
