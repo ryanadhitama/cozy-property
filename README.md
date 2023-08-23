@@ -26,6 +26,6 @@ yarn ios
 | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
 | <img src="https://raw.githubusercontent.com/ryanadhitama/cozy-property/master/screenshot/01.splash.png" alt="drawing" /> | <img src="https://raw.githubusercontent.com/ryanadhitama/cozy-property/master/screenshot/02.404.png" alt="drawing" /> |
 
-| Home                                                                                                                     | Under Development                                                                                                     |
+| Homepage                                                                                                                     | Under Dev                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
 | <img src="https://raw.githubusercontent.com/ryanadhitama/cozy-property/master/screenshot/03.home.png" alt="drawing" /> | <img src="https://raw.githubusercontent.com/ryanadhitama/cozy-property/master/screenshot/04.under-development.png" alt="drawing" /> |
