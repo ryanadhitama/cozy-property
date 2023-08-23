@@ -1,7 +1,10 @@
 import React from 'react';
-import { Platform, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { colors } from '../../../utils';
 import { TabItem } from '../../atoms';
+import { Dimensions } from 'react-native';
+
+const { width } = Dimensions.get('window');
 
 export type BottomNavigatorProps = {
   title?: string;
@@ -62,10 +65,13 @@ export default BottomNavigator;
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingHorizontal: 53,
-    paddingTop: 12,
-    paddingBottom: Platform.OS === 'ios' ? 30 : 12,
-    backgroundColor: colors.grey
+    justifyContent: 'space-around',
+    position: 'absolute',
+    width: width - 48,
+    right: 24,
+    bottom: 20,
+    marginBottom: 12,
+    backgroundColor: colors.grey,
+    borderRadius: 23
   }
 });
