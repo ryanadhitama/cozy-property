@@ -1,8 +1,9 @@
+import { BottomNavigator } from '@components';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import { Home, Messages, News, NotFound, Splash, Wishlist } from '../pages';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { BottomNavigator } from '@components';
+import { Home, Messages, News, NotFound, SpaceDetail, Splash, Wishlist } from '../pages';
 
 export type RootStackParamList = {
   Splash: undefined;
@@ -14,8 +15,11 @@ export type RootTabParamList = {
   Home: undefined;
   Messages: undefined;
   News: undefined;
+  SpaceDetail: undefined;
   Wishlist: undefined;
 };
+
+export type Navigation = NativeStackScreenProps<RootStackParamList>['navigation'];
 
 const Stack = createStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator<RootTabParamList>();
@@ -38,6 +42,7 @@ const Router = () => {
       <Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }} />
       <Stack.Screen name="MainApp" component={MainApp} options={{ headerShown: false }} />
       <Stack.Screen name="NotFound" component={NotFound} options={{ headerShown: false }} />
+      <Tab.Screen name="SpaceDetail" component={SpaceDetail} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 };

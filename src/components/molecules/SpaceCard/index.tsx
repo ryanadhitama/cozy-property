@@ -1,26 +1,35 @@
 import { Star } from '@assets';
+import { useNavigation } from '@react-navigation/native';
 import { colors, fonts } from '@utils';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { Navigation } from 'router';
 
 const SpaceCard = ({ name, image, rating, price, location }: any) => {
+  const navigation = useNavigation<Navigation>();
   return (
-    <View style={styles.container}>
-      <View style={styles.imageRating}>
-        <Image source={image} style={styles.image} />
-        <View style={styles.rating}>
-          <Star />
-          <Text style={styles.ratingAmount}>{rating}/5</Text>
+    <TouchableOpacity
+      onPress={() => {
+        navigation.navigate('SpaceDetail');
+      }}
+    >
+      <View style={styles.container}>
+        <View style={styles.imageRating}>
+          <Image source={image} style={styles.image} />
+          <View style={styles.rating}>
+            <Star />
+            <Text style={styles.ratingAmount}>{rating}/5</Text>
+          </View>
+        </View>
+        <View>
+          <Text style={styles.title}>{name}</Text>
+          <View style={styles.price}>
+            <Text style={styles.priceAmount}>${price}</Text>
+            <Text style={styles.priceDuration}> / month</Text>
+          </View>
+          <Text style={styles.location}>{location}</Text>
         </View>
       </View>
-      <View>
-        <Text style={styles.title}>{name}</Text>
-        <View style={styles.price}>
-          <Text style={styles.priceAmount}>${price}</Text>
-          <Text style={styles.priceDuration}> / month</Text>
-        </View>
-        <Text style={styles.location}>{location}</Text>
-      </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
