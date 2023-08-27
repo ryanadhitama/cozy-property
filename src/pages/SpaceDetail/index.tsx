@@ -1,4 +1,4 @@
-import { Bedroom, Cupboard, DummySpace1, DummySpace2, DummySpace3, Kitchen } from '@assets';
+import { Bedroom, Cupboard, DummySpace1, DummySpace2, DummySpace3, Kitchen, Star } from '@assets';
 import { Button } from '@components';
 import { colors, fonts } from '@utils';
 import React from 'react';
@@ -12,11 +12,20 @@ const SpaceDetail = ({ navigation, route }: any) => {
     <SafeAreaView style={styles.page}>
       <Image style={styles.image} source={image} />
       <View style={styles.content}>
-        <View>
-          <Text style={styles.title}>{name}</Text>
-          <View style={styles.price}>
-            <Text style={styles.priceAmount}>${price}</Text>
-            <Text style={styles.priceDuration}> / month</Text>
+        <View style={styles.header}>
+          <View>
+            <Text style={styles.title}>{name}</Text>
+            <View style={styles.price}>
+              <Text style={styles.priceAmount}>${price}</Text>
+              <Text style={styles.priceDuration}> / month</Text>
+            </View>
+          </View>
+          <View style={styles.rating}>
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <Star />
           </View>
         </View>
         <View>
@@ -63,6 +72,7 @@ const SpaceDetail = ({ navigation, route }: any) => {
         </View>
         <View>
           <Text style={styles.subtitle}>Location</Text>
+          <Text style={styles.address}>Jln. Kappan Sukses No. 20</Text>
         </View>
         <Button title="Book Now" onPress={() => navigation.goBack()} />
       </View>
@@ -138,6 +148,11 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primary[300],
     fontSize: 14
   },
+  address: {
+    color: colors.text.secondary,
+    fontFamily: fonts.primary[300],
+    fontSize: 16
+  },
   photos: {
     marginTop: 12
   },
@@ -146,5 +161,14 @@ const styles = StyleSheet.create({
     width: 110,
     height: 88,
     objectFit: 'cover'
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+  rating: {
+    flexDirection: 'row',
+    gap: 1
   }
 });
