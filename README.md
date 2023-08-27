@@ -29,3 +29,7 @@ yarn ios
 | Homepage                                                                                                                     | Under Dev                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
 | <img src="https://raw.githubusercontent.com/ryanadhitama/cozy-property/master/screenshot/03.home.png" alt="drawing" /> | <img src="https://raw.githubusercontent.com/ryanadhitama/cozy-property/master/screenshot/04.under-development.png" alt="drawing" /> |
+
+| Space Detail                                                                                                                     | Space Detail                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://raw.githubusercontent.com/ryanadhitama/cozy-property/master/screenshot/05.space-detail.png" alt="drawing" /> | <img src="https://raw.githubusercontent.com/ryanadhitama/cozy-property/master/screenshot/06.space-detail-1.png" alt="drawing" /> |
