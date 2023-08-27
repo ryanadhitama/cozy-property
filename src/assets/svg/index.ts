@@ -1,25 +1,14 @@
-import Logo from './logo.svg';
-import NotFound from './404.svg';
-import Home from './home.svg';
-import HomeActive from './home-active.svg';
-import Message from './message.svg';
-import MessageActive from './message-active.svg';
-import News from './news.svg';
-import NewsActive from './news-active.svg';
-import Wishlist from './wishlist.svg';
-import WishlistActive from './wishlist-active.svg';
-import Star from './star.svg';
-
-export {
-  Logo,
-  NotFound,
-  Home,
-  HomeActive,
-  Message,
-  MessageActive,
-  News,
-  NewsActive,
-  Wishlist,
-  WishlistActive,
-  Star
-};
+export { default as Logo } from './logo.svg';
+export { default as NotFound } from './404.svg';
+export { default as Home } from './home.svg';
+export { default as HomeActive } from './home-active.svg';
+export { default as Message } from './message.svg';
+export { default as MessageActive } from './message-active.svg';
+export { default as News } from './news.svg';
+export { default as NewsActive } from './news-active.svg';
+export { default as Wishlist } from './wishlist.svg';
+export { default as WishlistActive } from './wishlist-active.svg';
+export { default as Star } from './star.svg';
+export { default as Bedroom } from './bedroom.svg';
+export { default as Cupboard } from './cupboard.svg';
+export { default as Kitchen } from './kitchen.svg';

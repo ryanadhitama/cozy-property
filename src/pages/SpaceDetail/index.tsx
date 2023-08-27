@@ -1,8 +1,9 @@
+import { Bedroom, Cupboard, Kitchen } from '@assets';
+import { Button } from '@components';
+import { colors, fonts } from '@utils';
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
-import { colors, fonts } from '@utils';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Button } from '@components';
 
 const SpaceDetail = ({ navigation, route }: any) => {
   const { image, name, price } = route?.params;
@@ -19,6 +20,29 @@ const SpaceDetail = ({ navigation, route }: any) => {
         </View>
         <View>
           <Text style={styles.subtitle}>Main Facilities</Text>
+          <View style={styles.facility}>
+            <View style={styles.facilityItem}>
+              <Kitchen />
+              <View style={styles.facilityItemText}>
+                <Text style={styles.facilityItemAmount}>1</Text>
+                <Text style={styles.facilityItemDesc}>Kitchen</Text>
+              </View>
+            </View>
+            <View style={styles.facilityItem}>
+              <Bedroom />
+              <View style={styles.facilityItemText}>
+                <Text style={styles.facilityItemAmount}>2</Text>
+                <Text style={styles.facilityItemDesc}>Bedroom</Text>
+              </View>
+            </View>
+            <View style={styles.facilityItem}>
+              <Cupboard />
+              <View style={styles.facilityItemText}>
+                <Text style={styles.facilityItemAmount}>2</Text>
+                <Text style={styles.facilityItemDesc}>Big Lemari</Text>
+              </View>
+            </View>
+          </View>
         </View>
         <View>
           <Text style={styles.subtitle}>Photos</Text>
@@ -66,8 +90,7 @@ const styles = StyleSheet.create({
     gap: 30
   },
   price: {
-    flexDirection: 'row',
-    marginBottom: 16
+    flexDirection: 'row'
   },
   priceAmount: {
     fontFamily: fonts.primary[500],
@@ -78,5 +101,27 @@ const styles = StyleSheet.create({
     color: colors.text.secondary,
     fontFamily: fonts.primary[300],
     fontSize: 16
+  },
+  facility: {
+    marginTop: 12,
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  facilityItem: {
+    gap: 8
+  },
+  facilityItemText: {
+    flexDirection: 'row',
+    gap: 2
+  },
+  facilityItemAmount: {
+    fontFamily: fonts.primary[500],
+    color: colors.primary,
+    fontSize: 14
+  },
+  facilityItemDesc: {
+    color: colors.text.secondary,
+    fontFamily: fonts.primary[300],
+    fontSize: 14
   }
 });
