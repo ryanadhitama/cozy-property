@@ -1,8 +1,18 @@
-import { Bedroom, Cupboard, DummySpace1, DummySpace2, DummySpace3, Kitchen, Star } from '@assets';
+import {
+  Bedroom,
+  Chevron,
+  Cupboard,
+  DummySpace1,
+  DummySpace2,
+  DummySpace3,
+  Kitchen,
+  Love,
+  Star
+} from '@assets';
 import { Button } from '@components';
 import { colors, fonts } from '@utils';
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -10,7 +20,16 @@ const SpaceDetail = ({ navigation, route }: any) => {
   const { image, name, price } = route?.params;
   return (
     <SafeAreaView style={styles.page}>
-      <Image style={styles.image} source={image} />
+      <View style={styles.imageHeader}>
+        <TouchableOpacity onPress={() => navigation.goBack()} style={{ ...styles.nav, left: 24 }}>
+          <Chevron />
+        </TouchableOpacity>
+        <TouchableOpacity style={{ ...styles.nav, right: 24 }}>
+          <Love />
+        </TouchableOpacity>
+
+        <Image style={styles.image} source={image} />
+      </View>
       <View style={styles.content}>
         <View style={styles.header}>
           <View>
@@ -170,5 +189,19 @@ const styles = StyleSheet.create({
   rating: {
     flexDirection: 'row',
     gap: 1
+  },
+  imageHeader: {
+    position: 'relative'
+  },
+  nav: {
+    backgroundColor: colors.white,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    position: 'absolute',
+    top: 24,
+    zIndex: 2,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });

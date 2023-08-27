@@ -12,3 +12,5 @@ export { default as Star } from './star.svg';
 export { default as Bedroom } from './bedroom.svg';
 export { default as Cupboard } from './cupboard.svg';
 export { default as Kitchen } from './kitchen.svg';
+export { default as Chevron } from './chevron.svg';
+export { default as Love } from './love.svg';
