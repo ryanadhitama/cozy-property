@@ -9,7 +9,12 @@ const SpaceCard = ({ name, image, rating, price, location }: any) => {
   return (
     <TouchableOpacity
       onPress={() => {
-        navigation.navigate('SpaceDetail');
+        navigation.navigate('SpaceDetail', {
+          name,
+          image,
+          rating,
+          price
+        });
       }}
     >
       <View style={styles.container}>
