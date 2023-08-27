@@ -1,8 +1,9 @@
-import { Bedroom, Cupboard, Kitchen } from '@assets';
+import { Bedroom, Cupboard, DummySpace1, DummySpace2, DummySpace3, Kitchen } from '@assets';
 import { Button } from '@components';
 import { colors, fonts } from '@utils';
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const SpaceDetail = ({ navigation, route }: any) => {
@@ -46,6 +47,19 @@ const SpaceDetail = ({ navigation, route }: any) => {
         </View>
         <View>
           <Text style={styles.subtitle}>Photos</Text>
+          <ScrollView
+            contentContainerStyle={{
+              gap: 16
+            }}
+            style={styles.photos}
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+          >
+            <Image style={styles.photosItem} source={DummySpace1} />
+            <Image style={styles.photosItem} source={DummySpace2} />
+            <Image style={styles.photosItem} source={DummySpace3} />
+            <Image style={styles.photosItem} source={DummySpace1} />
+          </ScrollView>
         </View>
         <View>
           <Text style={styles.subtitle}>Location</Text>
@@ -75,7 +89,7 @@ const styles = StyleSheet.create({
     color: colors.black
   },
   image: {
-    height: 350,
+    height: 250,
     width: '100%',
     objectFit: 'cover'
   },
@@ -112,7 +126,7 @@ const styles = StyleSheet.create({
   },
   facilityItemText: {
     flexDirection: 'row',
-    gap: 2
+    gap: 4
   },
   facilityItemAmount: {
     fontFamily: fonts.primary[500],
@@ -123,5 +137,14 @@ const styles = StyleSheet.create({
     color: colors.text.secondary,
     fontFamily: fonts.primary[300],
     fontSize: 14
+  },
+  photos: {
+    marginTop: 12
+  },
+  photosItem: {
+    borderRadius: 16,
+    width: 110,
+    height: 88,
+    objectFit: 'cover'
   }
 });
